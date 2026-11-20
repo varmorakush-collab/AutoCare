@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/card_bg"
+    android:elevation="4dp"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.04"
+            android:text="REPLACED PART"
+            android:textColor="@color/splash_accent_teal"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/removePartImageView"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="Remove Part"
+            android:focusable="true"
+            android:padding="6dp"
+            android:src="@android:drawable/ic_menu_delete"
+            app:tint="#EF4444" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/partNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/input_bg"
+        android:fontFamily="sans-serif"
+        android:hint="Part Name"
+        android:imeOptions="actionNext"
+        android:inputType="text|textCapWords"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/splash_text_primary"
+        android:textColorHint="@color/splash_text_secondary"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/partBrandEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/input_bg"
+        android:fontFamily="sans-serif"
+        android:hint="Part Brand"
+        android:imeOptions="actionNext"
+        android:inputType="text|textCapWords"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/splash_text_primary"
+        android:textColorHint="@color/splash_text_secondary"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/quantityEditText"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/input_bg"
+            android:fontFamily="sans-serif"
+            android:hint="Qty"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/splash_text_primary"
+            android:textColorHint="@color/splash_text_secondary"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/priceEditText"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/input_bg"
+            android:fontFamily="sans-serif"
+            android:hint="Price / Unit"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/splash_text_primary"
+            android:textColorHint="@color/splash_text_secondary"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/warrantyUnitSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/input_bg"
+        android:paddingHorizontal="12dp" />
+
+    <LinearLayout
+        android:id="@+id/warrantyContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/warrantyDurationEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/input_bg"
+            android:fontFamily="sans-serif"
+            android:hint="Warranty Duration"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/splash_text_primary"
+            android:textColorHint="@color/splash_text_secondary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvWarrantyStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/input_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:hint="Start Date (Tap to select)"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/splash_text_primary"
+            android:textColorHint="@color/splash_text_secondary"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

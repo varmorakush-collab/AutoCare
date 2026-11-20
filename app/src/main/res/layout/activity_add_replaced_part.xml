@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="#F4F7FB">
+
+    <!-- Top Header Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:background="#FFFFFF"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/backImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_arrow_back"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            app:tint="#0F172A"
+            android:contentDescription="Back"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Replaced Part"
+            android:textColor="#0F172A"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-bold"
+            android:letterSpacing="-0.01" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="28dp">
+
+            <!-- Service Summary Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="1dp"
+                app:cardUseCompatPadding="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SERVICE SUMMARY"
+                        android:textColor="#627282"
+                        android:textSize="11sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="0.04"
+                        android:layout_marginBottom="12dp" />
+
+                    <!-- Customer Name -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_person"
+                            android:contentDescription="@null"
+                            android:layout_marginEnd="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvCustomerNameSummary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#0F141C"
+                            android:textSize="18sp"
+                            android:fontFamily="sans-serif-bold" />
+                    </LinearLayout>
+
+                    <!-- Vehicle Info -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_directions_car"
+                            android:contentDescription="@null"
+                            android:layout_marginEnd="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvVehicleDetailsSummary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#627282"
+                            android:textSize="14sp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+
+                    <!-- Service Date Chip -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/icon_box_teal"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="6dp">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:src="@drawable/ic_calendar_today"
+                            android:contentDescription="@null"
+                            android:layout_marginEnd="6dp" />
+
+                        <TextView
+                            android:id="@+id/tvServiceDateSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#00A86B"
+                            android:textSize="13sp"
+                            android:fontFamily="sans-serif-bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Part Details Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="1dp"
+                app:cardUseCompatPadding="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PART DETAILS"
+                        android:textColor="#627282"
+                        android:textSize="11sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="0.04"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Part Name -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PART NAME"
+                        android:textColor="#64748B"
+                        android:textSize="11sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="0.04"
+                        android:layout_marginBottom="6dp" />
+
+                    <EditText
+                        android:id="@+id/partNameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:hint="e.g. Brake Pads, Oil Filter"
+                        android:inputType="text|textCapWords"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/input_bg"
+                        android:textColor="#1E293B"
+                        android:textColorHint="#94A3B8"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif"
+                        android:paddingHorizontal="16dp"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Part Brand -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PART BRAND"
+                        android:textColor="#64748B"
+                        android:textSize="11sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="0.04"
+                        android:layout_marginBottom="6dp" />
+
+                    <EditText
+                        android:id="@+id/partBrandEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:hint="e.g. Bosch, Castrol"
+                        android:inputType="text|textCapWords"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/input_bg"
+                        android:textColor="#1E293B"
+                        android:textColorHint="#94A3B8"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif"
+                        android:paddingHorizontal="16dp"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Quantity & Price Side-by-Side -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="8dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="QUANTITY"
+                                android:textColor="#64748B"
+                                android:textSize="11sp"
+                                android:fontFamily="sans-serif-medium"
+                                android:letterSpacing="0.04"
+                                android:layout_marginBottom="6dp" />
+
+                            <EditText
+                                android:id="@+id/quantityEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="52dp"
+                                android:hint="1"
+                                android:inputType="number"
+                                android:imeOptions="actionNext"
+                                android:background="@drawable/input_bg"
+                                android:textColor="#1E293B"
+                                android:textColorHint="#94A3B8"
+                                android:textSize="15sp"
+                                android:fontFamily="sans-serif"
+                                android:paddingHorizontal="16dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.2"
+                            android:orientation="vertical"
+                            android:layout_marginStart="8dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="PRICE PER UNIT (₹)"
+                                android:textColor="#64748B"
+                                android:textSize="11sp"
+                                android:fontFamily="sans-serif-medium"
+                                android:letterSpacing="0.04"
+                                android:layout_marginBottom="6dp" />
+
+                            <EditText
+                                android:id="@+id/priceEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="52dp"
+                                android:hint="0.00"
+                                android:inputType="numberDecimal"
+                                android:imeOptions="actionNext"
+                                android:background="@drawable/input_bg"
+                                android:textColor="#1E293B"
+                                android:textColorHint="#94A3B8"
+                                android:textSize="15sp"
+                                android:fontFamily="sans-serif"
+                                android:paddingHorizontal="16dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Total Part Cost Highlight Strip -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/icon_box_teal"
+                        android:padding="16dp"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Total Part Cost"
+                            android:textColor="#0F172A"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-bold" />
+
+                        <TextView
+                            android:id="@+id/totalPartCostTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.00"
+                            android:textColor="#00A86B"
+                            android:textSize="20sp"
+                            android:fontFamily="sans-serif-bold" />
+                    </LinearLayout>
+
+                    <!-- Warranty Section -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="WARRANTY UNIT"
+                        android:textColor="#64748B"
+                        android:textSize="11sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="0.04"
+                        android:layout_marginBottom="6dp" />
+
+                    <Spinner
+                        android:id="@+id/warrantyUnitSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:background="@drawable/input_bg"
+                        android:paddingHorizontal="12dp"
+                        android:layout_marginBottom="16dp" />
+
+                    <LinearLayout
+                        android:id="@+id/warrantyContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="WARRANTY DURATION"
+                            android:textColor="#64748B"
+                            android:textSize="11sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:letterSpacing="0.04"
+                            android:layout_marginBottom="6dp" />
+
+                        <EditText
+                            android:id="@+id/warrantyDurationEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:hint="e.g. 6 or 12"
+                            android:inputType="number"
+                            android:imeOptions="actionNext"
+                            android:background="@drawable/input_bg"
+                            android:textColor="#1E293B"
+                            android:textColorHint="#94A3B8"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif"
+                            android:paddingHorizontal="16dp"
+                            android:layout_marginBottom="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@drawable/input_bg"
+                            android:padding="14dp"
+                            android:gravity="center_vertical">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Warranty Start"
+                                    android:textColor="#64748B"
+                                    android:textSize="11sp" />
+                                <TextView
+                                    android:id="@+id/tvWarrantyStartDate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#1E293B"
+                                    android:textSize="14sp"
+                                    android:fontFamily="sans-serif-medium" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Warranty Expiry"
+                                    android:textColor="#64748B"
+                                    android:textSize="11sp" />
+                                <TextView
+                                    android:id="@+id/tvWarrantyExpiryDate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#00A86B"
+                                    android:textSize="14sp"
+                                    android:fontFamily="sans-serif-bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Notes -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="NOTES (OPTIONAL)"
+                        android:textColor="#64748B"
+                        android:textSize="11sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="0.04"
+                        android:layout_marginBottom="6dp" />
+
+                    <EditText
+                        android:id="@+id/partNotesEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:hint="Serial number, invoice reference, etc."
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:imeOptions="actionDone"
+                        android:gravity="top|start"
+                        android:background="@drawable/input_bg"
+                        android:textColor="#1E293B"
+                        android:textColorHint="#94A3B8"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif"
+                        android:padding="16dp"
+                        android:lineSpacingExtra="2dp"
+                        android:layout_marginBottom="4dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Action Button -->
+            <Button
+                android:id="@+id/savePartButton"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/btn_primary_bg"
+                app:backgroundTint="@null"
+                android:stateListAnimator="@null"
+                android:text="Save Replaced Part"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.02"
+                android:textAllCaps="false"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/card_bg"
+    android:elevation="4dp"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvGarageName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="-0.01"
+            android:textColor="@color/splash_text_primary"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvStatusBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_bg"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.04"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:textColor="@color/splash_accent_teal"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvOwnerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.01"
+        android:textColor="@color/splash_accent_teal"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tvGarageAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="sans-serif"
+        android:lineSpacingExtra="2dp"
+        android:textColor="@color/splash_text_secondary"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tvRequestDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/splash_text_secondary"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/btnCancelRequest"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@drawable/input_bg"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.02"
+        android:stateListAnimator="@null"
+        android:text="Cancel Request"
+        android:textAllCaps="false"
+        android:textColor="#FF5555"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:backgroundTint="@null" />
+
+</LinearLayout>
